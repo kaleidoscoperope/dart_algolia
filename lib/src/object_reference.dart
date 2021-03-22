@@ -123,7 +123,7 @@ class AlgoliaObjectReference {
     }
     data['objectID'] = _objectId;
     data['createIfNotExists'] = createIfNotExists;
-    var response = await http.put(
+    var response = await http.post(
       Uri.parse(url),
       headers: algolia._header,
       body: utf8.encode(json.encode(data, toEncodable: jsonEncodeHelper)),
